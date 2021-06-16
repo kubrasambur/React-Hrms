@@ -10,10 +10,10 @@ function EmployersList() {
     employeersService
       .getEmployers()
       .then((result) => setEmployers(result.data));
-  });
+  },[]);
 
   return (
-    <div>EMPLOYERS LIST
+    <div> <br /> EMPLOYERS LIST
       <Table inverted>
         <Table.Header>
           <Table.Row>
@@ -52,6 +52,7 @@ function EmployersList() {
           </Table.Row>
         </Table.Footer>
       </Table>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   );
 }

@@ -1,261 +1,276 @@
 {
+  "CandicateLanguage": [
+    {
+      "id": "1",
+      "name": "English",
+      "level": "3"
+    },
+    {
+      "id": "2",
+      "name": "French",
+      "level": "4"
+    },
+    {
+      "id": "3",
+      "name": "Turkish",
+      "level": "5"
+    }
+  ],
 
-	"CandicateLanguage":[
-	{
-	"id":"1",
-	"name":"candy",
-	"level":"3"
-	},
-	{
-	"id":"2",
-	"name":"candyy",
-	"level":"4"
-	},
-	{
-	"id":"3",
-	"name":"candyu",
-	"level":"7"
-	}
-	],
-	
-	"Candicate":[
-	{
-	"id":"1",
-	"firstname":"Kübra",
-	"lastname":"Sambur",
-	"identifactionNumber":"126464554643"
-	},
-	{
-	"id":"2",
-	"firstname":"Berkay",
-	"lastname":"Ergün",
-	"identifactionNumber":"156456456234"
-	},
-	{
-	"id":"3",
-	"firstname":"Edanur",
-	"lastname":"Sambur",
-	"identifactionNumber":"124564564345"
-	}
-	],
-	
-	"CandidateSchool":[
-	{
-	"id":"1",
-	"universityname":"aa",
-	"universitydepartment":"bb",
-	"startdate":"00",
-	"graduateDate":"11"
-	},
-	{
-	"id":"2",
-	"universityname":"asa",
-	"universitydepartment":"bsb",
-	"startdate":"010",
-	"graduateDate":"101"
-	},
-	{
-	"id":"3",
-	"universityname":"saa",
-	"universitydepartment":"sbb",
-	"startdate":"001",
-	"graduateDate":"110"
-	}
-	],
+  "Candidate": [
+    {
+      "id": "1",
+      "firstname": "Berkay",
+      "lastname": "Ergün",
+      "identifactionNumber": "12312312312312"
+    },
+    {
+      "id": "2",
+      "firstname": "Kübra",
+      "lastname": "Sambur",
+      "identifactionNumber": "121321312312234"
+    },
+    {
+      "id": "3",
+      "firstname": "Ulaş",
+      "lastname": "Bozkurt",
+      "identifactionNumber": "546565412345"
+    }
+  ],
 
-	"CandidateWorkExperience":[
-	{
-	"id":"1",
-	"name":"aa",
-	"positionName":"bb",
-	"startDate":"22",
-	"endDate":"55"
-	},
-	{
-	"id":"2",
-	"name":"asa",
-	"positionName":"bsb",
-	"startDate":"242",
-	"endDate":"525"
-	},
-	{
-	"id":"3",
-	"name":"aad",
-	"positionName":"bdb",
-	"startDate":"262",
-	"endDate":"556"
-	}
-	],
-	
-	"City":[
-	{
-	"id":"1",
-	"cityName":"a"
-	},
-	{
-	"id":"2",
-	"cityName":"ab"
-	},
-	{
-	"id":"3",
-	"cityName":"abc"
-	}
-	],
+  "CandidateSchool": [
+    {
+      "id": "1",
+      "universityname": "Duzce University",
+      "universitydepartment": "Computer Engineering",
+      "startdate": "2018",
+      "graduateDate": "2022"
+    },
+    {
+      "id": "2",
+      "universityname": "Bogazici University",
+      "universitydepartment": "Business Management",
+      "startdate": "2020",
+      "graduateDate": "2024"
+    },
+    {
+      "id": "3",
+      "universityname": "Istanbul University",
+      "universitydepartment": "Medical School",
+      "startdate": "2016",
+      "graduateDate": "2022"
+    }
+  ],
 
-	"Cv":[
-	{
-	"id":"1",
-	"candidate_id":"2",
-	"social_adress_id":"6", 
-	"jobseeker_id":"6"
-	},
-	{
-	"id":"2",
-	"candidate_id":"3",
-	"social_adress_id":"8", 
-	"jobseeker_id":"7"
-	},
-	{
-	"id":"3",
-	"candidate_id":"7",
-	"social_adress_id":"1",
-	"jobseeker_id":"2"
-	}
-	],
+  "CandidateWorkExperience": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "positionName": "IK",
+      "startDate": "2020",
+      "endDate": "-"
+    },
+    {
+      "id": "2",
+      "name": "Microsoft",
+      "positionName": "Software Developer",
+      "startDate": "2015",
+      "endDate": "2017"
+    },
+    {
+      "id": "3",
+      "name": "Oracle",
+      "positionName": "Java Developer",
+      "startDate": "2017",
+      "endDate": "2020"
+    }
+  ],
 
-	"Employeers":[
-	{
-	"id":"1",
-	"firstName":"Kübra",
-	"lastName":"Sambur",
-	"position_id":"3"
-	},
-	{
-	"id":"2",
-	"firstName":"Berkay",
-	"lastName":"Ergün",
-	"position_id":"4"
-	},
-	{
-	"id":"3",
-	"firstName":"Edanur",
-	"lastName":"Sambur",
-	"position_id":"5"
-	}
-	],
+  "City": [
+    {
+      "id": "1",
+      "cityName": "Bursa"
+    },
+    {
+      "id": "2",
+      "cityName": "Kars"
+    },
+    {
+      "id": "3",
+      "cityName": "Balıkesir/Susurluk"
+    }
+  ],
 
-	"Users":[
-	{
-  	"id":"1",
-	"email":"candy@gmail.com",
-	"password":"123"
-	},
-	{
-	"id":"2",
-	"email":"berkay@gmail.com",
-	"password":"12345"
+  "Cv": [
+    {
+      "id": "1",
+      "jobseeker_name": "Kübra",
+      "jobseeker_surname": "Sambur",
+      "jobseekerExperience": "Turkcell",
+      "jobseeker_id": "1"
+    },
+    {
+      "id": "2",
+      "jobseeker_name": "Edanur",
+      "jobseeker_surname": "Sambur",
+      "jobseekerExperience": "Vodafone",
+      "jobseeker_id": "2"
+    },
+    {
+      "id": "3",
+      "jobseeker_name": "Berkay",
+      "jobseeker_surname": "Ergün",
+      "jobseekerExperience": "Biletinial.com",
+      "jobseeker_id": "3"
+    }
+  ],
 
-	},
-	{
-	"id":"3",
-	"email":"kubra@gmail.com",
-	"password":"123454"
-	}
+  "Employeers": [
+    {
+      "id": "1",
+      "firstName": "Ali",
+      "lastName": "Kaya",
+      "position_id": "1"
+    },
+    {
+      "id": "2",
+      "firstName": "Ahmet",
+      "lastName": "Aktaş",
+      "position_id": "2"
+    },
+    {
+      "id": "3",
+      "firstName": "Ayşe",
+      "lastName": "Tekin",
+      "position_id": "3"
+    }
+  ],
 
-	],
+  "Users": [
+    {
+      "id": "1",
+      "email": "candy@gmail.com",
+      "password": "1asd1223"
+    },
+    {
+      "id": "2",
+      "email": "berkay@gmail.com",
+      "password": "1sad2345"
+    },
+    {
+      "id": "3",
+      "email": "kubra@gmail.com",
+      "password": "sad13"
+    }
+  ],
 
-	"JobSeekers": [
-	{
-	"id":"1",
-	"first_name":"Berkay",
-	"last_name":"ergun"	
-	},
+  "JobSeekers": [
+    {
+      "id": "1",
+      "first_name": "Ali",
+      "last_name": "Şen"
+    },
 
-	{
-	"id":"2",
-	"first_name":"Kubra",
-	"last_name":"Sambur"	
-	},
+    {
+      "id": "2",
+      "first_name": "Ayşe",
+      "last_name": "Aktepe"
+    },
 
-	{
-	"id":"3",
-	"first_name":"Ufuk",
-	"last_name":"Yeltekin"	
-	}
+    {
+      "id": "3",
+      "first_name": "Mehmet",
+      "last_name": "Kaya"
+    }
+  ],
 
-	],
+  "JobPosition": [
+    {
+      "id": "1",
+      "name": "Mühendis"
+    },
 
-	"JobPosition": [
-	{
-	"id":"1",
-	"name":"Mühendis"
-		
-	},
+    {
+      "id": "2",
+      "name": "Stajyer"
+    },
 
-	{
-	"id":"2",
-	"name":"Stajyer"
-		
-	},
+    {
+      "id": "3",
+      "name": "Hizmetli"
+    }
+  ],
 
-	{
-	"id":"3",
-	"name":"Hizmetli"
-		
-	}
+  "JobAdvertisement": [
+    {
+      "id": "1",
+      "employer": "Apple",
+      "job_position_id": "3",
+      "city_id": "55",
+      "job_description": "Açıklama1",
+      "min_salary": "4000",
+      "max_salary": "5000",
+      "Work_type": "Homeoffice"
+    },
 
-	],
+    {
+      "id": "2",
+      "employer": "microsoft",
+      "job_position_id": "2",
+      "city_id": "3",
+      "job_description": "Açıklama2",
+      "min_salary": "3000",
+      "max_salary": "6000",
+      "Work_type": "office"
+    },
 
-	"JobAdvertisement": [
-	{
-	"employer_id":"1",
-	"job_position_id":"1",
-	"city_id":"1",
-	"job_description":"qwdjkdqw",
-	"min_salary":"4000",
-	"max_salary":"5000"
-	
-	},
+    {
+      "id": "3",
+      "employer": "Samsung",
+      "job_position_id": "1",
+      "city_id": "5",
+      "job_description": "Açıklama3",
+      "min_salary": "7000",
+      "max_salary": "8000",
+      "Work_type": "Freelancer"
+    }
+  ],
 
-	{
-	"employer_id":"2",
-	"job_position_id":"2",
-	"city_id":"3",
-	"job_description":"q2131sddqw",
-	"min_salary,":"5000",
-	"max_salary,":"6000"	
-	},
+  "Employers": [
+    {
+      "id": "1",
+      "company_name": "microsoft",
+      "job_id": "1"
+    },
 
-	{
-	"employer_id":"3",
-	"job_position_id":"3",
-	"city_id":"5",
-	"job_description":"qwdjkdqw",
-	"min_salary,":"7000",
-	"max_salary,":"8000"
-	}
+    {
+      "id": "2",
+      "company_name": "apple",
+      "job_id": "2"
+    },
 
-	],
+    {
+      "id": "3",
+      "company_name": "oracle",
+      "job_id": "3"
+    }
+  ],
 
-	"Employers": [
-	{
-	"id":"1",
-	"company_name":"microsoft",
-	"job_id":"1"
-	
-	},
-
-	{
-	"id":"2",
-	"company_name":"apple",
-	"job_id":"2"	
-	},
-
-	{
-	"id":"3",
-	"company_name":"oracle",
-	"job_id":"3"
-	}
-
-	]
+  "JobEmployer": [
+    {
+      "id": "1",
+      "user_companyName": "microsoft",
+      "job_id": "1"
+    },
+    {
+      "id": "2",
+      "user_companyName": "Apple",
+      "job_id": "2"
+    },
+    {
+      "id": "3",
+      "user_companyName": "Samsung",
+      "job_id": "3"
+    }
+  ]
 }

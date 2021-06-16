@@ -15,10 +15,11 @@ function CvLink() {
           <Card.Meta>Kübra Sambur</Card.Meta>
           <Card.Description>
           <strong>Cv</strong> Listesini görmek için butona tıklayınız.
+          <br /> <br />
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <Button href="http://localhost:3001/Cv" color="green">
+            <Button href="http://localhost:3001/Cv" color="black">
               
               See Cv List
             </Button>

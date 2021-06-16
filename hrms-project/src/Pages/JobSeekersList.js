@@ -13,7 +13,7 @@ function JobSeekersList() {
   },[]);
 
   return (
-    <div>JOB SEEKERS LIST
+    <div> <br /> JOB SEEKERS LIST
       <Table inverted>
         <Table.Header>
           <Table.Row>
@@ -52,6 +52,7 @@ function JobSeekersList() {
           </Table.Row>
         </Table.Footer>
       </Table>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   );
 }

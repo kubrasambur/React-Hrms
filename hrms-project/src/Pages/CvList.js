@@ -10,15 +10,16 @@ function CvList() {
     cvService
       .getCv()
       .then((result) => setCv(result.data));
-  });
+  },[]);
 
   return (
-    <div>CV LIST
+    <div> <br/> CV LIST
       <Table inverted>
         <Table.Header >
           <Table.Row>
-            <Table.HeaderCell>Candidate Id</Table.HeaderCell>
-            <Table.HeaderCell>Social Adress Id</Table.HeaderCell>
+            <Table.HeaderCell>First Name</Table.HeaderCell>
+            <Table.HeaderCell>Last Name</Table.HeaderCell>
+            <Table.HeaderCell>Experiences</Table.HeaderCell>
             <Table.HeaderCell>Job Seeker Id</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
@@ -26,8 +27,9 @@ function CvList() {
         <Table.Body>
           {cvs.map((cv) => (
             <Table.Row key={cv.id}>
-              <Table.Cell>{cv.candidate_id}</Table.Cell>
-              <Table.Cell>{cv.social_adress_id}</Table.Cell>
+              <Table.Cell>{cv.jobseeker_name}</Table.Cell>
+              <Table.Cell>{cv.jobseeker_surname}</Table.Cell>
+              <Table.Cell>{cv.jobseekerExperience}</Table.Cell>
               <Table.Cell>{cv.jobseeker_id}</Table.Cell>
             </Table.Row>
           ))}
@@ -52,6 +54,7 @@ function CvList() {
           </Table.Row>
         </Table.Footer>
       </Table>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   );
 }
