@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Icon, Menu, Table } from "semantic-ui-react";
-import EmployeersService from "../services/EmployeersService";
+import {  Table } from "semantic-ui-react";
+import EmployeersService from "../../services/EmployeersService";
 
 function EmployeersList() {
   const [employeers, setEmployeers] = useState([]);
@@ -13,8 +13,8 @@ function EmployeersList() {
   },[]);
 
   return (
-    <div> <br /> EMPLOYEERS LIST
-      <Table inverted>
+    <div className="bbb"> <br /> EMPLOYEERS LIST
+      <Table inverted color="blue" basic>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>First Name</Table.HeaderCell>
@@ -33,24 +33,7 @@ function EmployeersList() {
           ))}
         </Table.Body>
 
-        <Table.Footer>
-          <Table.Row>
-            <Table.HeaderCell colSpan="3">
-              <Menu floated="right" pagination>
-                <Menu.Item as="a" icon>
-                  <Icon name="chevron left" />
-                </Menu.Item>
-                <Menu.Item as="a">1</Menu.Item>
-                <Menu.Item as="a">2</Menu.Item>
-                <Menu.Item as="a">3</Menu.Item>
-                <Menu.Item as="a">4</Menu.Item>
-                <Menu.Item as="a" icon>
-                  <Icon name="chevron right" />
-                </Menu.Item>
-              </Menu>
-            </Table.HeaderCell>
-          </Table.Row>
-        </Table.Footer>
+        
       </Table>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>

@@ -16,11 +16,38 @@
 .text{
   text-align: center;
 }
+.bas{
+  font-size: 9em;
+  text-align: center;
+}
+
+.ff{
+  border: unset;
+  background-color:transparent;
+}
+.btns{
+  margin: -2% 4% -1.5% 10%; 
+  padding: -1% 2% 2% 2%;
+}
+.tttt{
+ padding-right: 20%;
+ padding-left: 20%;
+}
 
 .header{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 5em;
   margin-bottom: 20px;
+}
+.hh{
+  text-align: center;
+}
+.bbb{
+ padding-right: 10%;
+ padding-left: 10%;
+ margin-left: 4%;
+ margin-right: 60px;
+
 }
 
 .p {
@@ -76,8 +103,9 @@ letter-spacing: 2px;
 
 .container {
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 5fr 5fr;
 grid-gap: 20px;
+grid-template-areas: inherit;
 }
 .counter {
 font-weight: 400;

@@ -6,7 +6,7 @@ import { Container } from "semantic-ui-react";
 
 function App() {
   return (
-    <div className="bg">
+    <div  className="bg">
       <Navi/>
       <Container className="main">
       <Dashboard/>

@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { Icon, Menu, Table } from "semantic-ui-react";
-import EmployersService from "../services/EmployersService";
+import JobSeekersService from "../../services/JobSeekersService";
 
-function EmployersList() {
-  const [employers, setEmployers] = useState([]);
+function JobSeekersList() {
+  const [jobSeekers, setJobSeekers] = useState([]);
 
   useEffect(() => {
-    let employeersService = new EmployersService();
-    employeersService
-      .getEmployers()
-      .then((result) => setEmployers(result.data));
+    let jobSeekersService = new JobSeekersService();
+    jobSeekersService
+      .getJobSeekers()
+      .then((result) => setJobSeekers(result.data));
   },[]);
 
   return (
-    <div> <br /> EMPLOYERS LIST
-      <Table inverted>
+    <div className="bbb"> <br /> JOB SEEKERS LIST
+      <Table inverted color="blue" basic>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Id</Table.HeaderCell>
-            <Table.HeaderCell>Company Name</Table.HeaderCell>
-            <Table.HeaderCell>Job Id</Table.HeaderCell>
+            <Table.HeaderCell>First Name</Table.HeaderCell>
+            <Table.HeaderCell>Last Name</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {employers.map((employer) => (
-            <Table.Row key={employer.id}>
-              <Table.Cell>{employer.id}</Table.Cell>
-              <Table.Cell>{employer.company_name}</Table.Cell>
-              <Table.Cell>{employer.id}</Table.Cell>
+          {jobSeekers.map((jobSeeker) => (
+            <Table.Row key={jobSeeker.id}>
+              <Table.Cell>{jobSeeker.id}</Table.Cell>
+              <Table.Cell>{jobSeeker.first_name}</Table.Cell>
+              <Table.Cell>{jobSeeker.last_name}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
@@ -57,4 +57,4 @@ function EmployersList() {
   );
 }
 
-export default EmployersList;
+export default JobSeekersList;

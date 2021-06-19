@@ -1,34 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { Icon, Menu, Table } from "semantic-ui-react";
-import JobSeekersService from "../services/JobSeekersService";
+import { Icon, Menu, Table,Button } from "semantic-ui-react";
+import EmployersService from "../../services/EmployersService";
+import { NavLink } from 'react-router-dom';
 
-function JobSeekersList() {
-  const [jobSeekers, setJobSeekers] = useState([]);
+function EmployersList() {
+  const [employers, setEmployers] = useState([]);
 
   useEffect(() => {
-    let jobSeekersService = new JobSeekersService();
-    jobSeekersService
-      .getJobSeekers()
-      .then((result) => setJobSeekers(result.data));
+    let employeersService = new EmployersService();
+    employeersService
+      .getEmployers()
+      .then((result) => setEmployers(result.data));
   },[]);
 
   return (
-    <div> <br /> JOB SEEKERS LIST
-      <Table inverted>
+    <div className="bbb"> <br /> Company LIST
+      <Table inverted color="blue" basic>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Id</Table.HeaderCell>
-            <Table.HeaderCell>First Name</Table.HeaderCell>
-            <Table.HeaderCell>Last Name</Table.HeaderCell>
+            <Table.HeaderCell>Company Name</Table.HeaderCell>
+            <Table.HeaderCell></Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {jobSeekers.map((jobSeeker) => (
-            <Table.Row key={jobSeeker.id}>
-              <Table.Cell>{jobSeeker.id}</Table.Cell>
-              <Table.Cell>{jobSeeker.first_name}</Table.Cell>
-              <Table.Cell>{jobSeeker.last_name}</Table.Cell>
+          {employers.map((employer) => (
+            <Table.Row key={employer.id}>
+              <Table.Cell>{employer.id}</Table.Cell>
+              <Table.Cell>{employer.company_name}</Table.Cell>
+              <Table.Cell><Button as={NavLink} to={`/Employers/${employer.id}`}>See Detail</Button></Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
@@ -57,4 +58,4 @@ function JobSeekersList() {
   );
 }
 
-export default JobSeekersList;
+export default EmployersList;

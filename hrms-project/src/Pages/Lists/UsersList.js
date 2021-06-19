@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Icon, Menu, Table } from "semantic-ui-react";
-import UsersService from "../services/UsersService";
+import UsersService from "../../services/UsersService";
 
 function UsersList() {
   const [users, setUsers] = useState([]);
@@ -13,8 +13,8 @@ function UsersList() {
   },[]);
 
   return (
-    <div> <br /> USERS LIST
-      <Table inverted>
+    <div className="bbb"> <br /> USERS LIST
+      <Table inverted color="blue" basic>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Id</Table.HeaderCell>

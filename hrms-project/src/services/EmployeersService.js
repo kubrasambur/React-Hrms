@@ -5,7 +5,7 @@ export default class EmployeersSevice{
         return axios.get("http://localhost:3000/Employeers")
     }
 
-    getEmployeersbyId(id){
+    getById(id){
         return axios.get("http://localhost:3000/Employeers?id="+id)
     }
 

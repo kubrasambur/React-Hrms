@@ -18,7 +18,7 @@ function JobSeekersLink() {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Button href="http://localhost:3001/JobSeekers" color="black">
+          <Button href="http://localhost:3001/JobSeekers" color="grey">
             See JobSeekers List
           </Button>
         </Card.Content>

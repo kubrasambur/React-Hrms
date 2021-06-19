@@ -18,20 +18,22 @@ function Navi() {
 
 
   return (
-    <iv>
-      <Menu inverted fixed="top">
+    <div>
+      <Menu color="red" inverted fixed="top">
         <Container >
           <Menu.Item as={NavLink} to="/" name="Anasayfa" />
           <Menu.Item as={NavLink} to="/JobEmployer" name="İş İlani Ver"/>
           <Menu.Item as={NavLink} to="/JobApplication" name="İş Başvuru Formu"/>
-
-          <Menu.Menu position="right">
+    
+          <Menu.Menu className="btns" position="right" >
               {isAuthenticated ? <SignIn signout={handlerSignOut}  />: <SignOut SignIn={handlerSignIn} /> }
 
           </Menu.Menu>
         </Container>
+          
+        
       </Menu>
-    </iv>
+    </div>
   );
 }
 

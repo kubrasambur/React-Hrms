@@ -19,7 +19,7 @@ function CvLink() {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <Button href="http://localhost:3001/Cv" color="black">
+            <Button href="http://localhost:3001/Cv" color="grey">
               
               See Cv List
             </Button>

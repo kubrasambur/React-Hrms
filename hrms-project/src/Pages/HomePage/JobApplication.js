@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "semantic-ui-react";
+import { Grid,Segment  } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
 
 function JobApplication() {
@@ -12,6 +12,7 @@ function JobApplication() {
   return (
     <div>
       <br />
+      <Segment inverted color="grey">
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid>
           <Grid.Row>
@@ -108,7 +109,7 @@ function JobApplication() {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column width={16}>
-              <input
+              <input color="grey"
                 {...register("WorkExperiences", { required: true })}
                 placeholder="Work Experiences"
               />
@@ -120,6 +121,7 @@ function JobApplication() {
           </Grid.Row>
         </Grid>
       </form>
+      </Segment>
       {/* <Table celled>
         <Table.Header>
           <Table.Row>

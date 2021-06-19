@@ -1,30 +1,24 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
 import { Route } from "react-router-dom";
-import JobAdvertsList from "../Pages/JobAdvertsList";
-import EmployeersList from "../Pages/EmployeersList";
-import CvList from "../Pages/CvList";
-import EmployersList from "../Pages/EmployersList";
-import JobSeekersList from "../Pages/JobSeekersList";
-import UsersList from "../Pages/UsersList";
+import JobAdvertsList from "../Pages/Lists/JobAdvertsList";
+import EmployeersList from "../Pages/Lists/EmployeersList";
+import CvList from "../Pages/Lists/CvList";
+import EmployersList from "../Pages/Lists/EmployersList";
+import JobSeekersList from "../Pages/Lists/JobSeekersList";
+import UsersList from "../Pages/Lists/UsersList";
 import List from "./List";
 import JobEmployer from "../Pages/HomePage/JobEmployer";
 import Login from "./LogIn/LogIn";
-import JobAdverstDetails from "../Pages/HomePage/JobAdverstDetails";
+import JobAdverstDetails from "../Pages/Details/JobAdverstDetails";
 import JobApplication from "../Pages/HomePage/JobApplication";
+import CvDetails from "../Pages/Details/CvDetails"
+import EmployersDetail from  "../Pages/Details/EmployersDetail"
 
 export default function Dashboard() {
   return (
     <div>
       <Grid stackable>
-      {/* <Grid.Row>
-        <Grid.Column width={16} className="header">
-          BURAYA ÖN YAZI GELECEK
-        </Grid.Column>
-        </Grid.Row> */}
-
-
-
         <Grid.Row>
         <Grid.Column width={16}>
 
@@ -37,10 +31,11 @@ export default function Dashboard() {
       <Route exact path="/Users" component={UsersList}/>
       <Route exact path="/JobAdverts" component={JobAdvertsList}/>
       <Route exact path="/List" component={List}  />
-
-      <Route  exact path="/JobApplication" component={JobApplication}  />
-      <Route  path="/JobAdverstDetails/:idd" component={JobAdverstDetails}  />
+      <Route exact path="/JobApplication" component={JobApplication}  />
+      <Route path="/JobAdvertisement/:id" component={JobAdverstDetails}  />
       <Route exact path="/JobEmployer" component={JobEmployer}  />
+      <Route exact path="/Cv/:id" component={CvDetails}  />
+      <Route exact path="/Employers/:id" component={EmployersDetail}/>
 
         </Grid.Column>
         </Grid.Row>

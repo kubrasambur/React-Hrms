@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "semantic-ui-react";
+import { Grid,Segment } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
 
 export default function JobEmployer() {
@@ -15,7 +15,8 @@ export default function JobEmployer() {
   return (
     <div>
       <br />
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <Segment inverted color="grey">
+      <form onSubmit={handleSubmit(onSubmit)} color="grey" >
         <Grid>
           <Grid.Row>
             <Grid.Column width={8}>
@@ -102,26 +103,8 @@ export default function JobEmployer() {
           </Grid.Row>
         </Grid>
       </form>
+      </Segment>
 
-      {/* <Table celled>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>qwdqdqwdq</Table.HeaderCell>
-            <Table.HeaderCell>Header</Table.HeaderCell>
-            <Table.HeaderCell>Header</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-          {jobEmployers.map((jobemployer) => (
-            <Table.Row key={jobemployer.id}>
-              <Table.Cell>{jobemployer.id}</Table.Cell>
-              <Table.Cell>{jobemployer.user_companyName}</Table.Cell>
-              <Table.Cell>{jobemployer.job_id}</Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table> */}
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
     </div>
