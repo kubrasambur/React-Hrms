@@ -1,77 +1,56 @@
 import React, { useEffect, useState } from "react";
 import UsersService from "../../services/UsersService";
 import { AgGridReact, AgGridColumn } from "ag-grid-react";
+import { Button } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
 
 function UsersList() {
-   const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     let usersService = new UsersService();
-    fetch('http://localhost:3000/Users')
     usersService.getUsers().then((result) => setUsers(result.data));
   }, []);
+  const agbuttonrender = (params) => {
+    return (
+      <Button as={NavLink} to={`/Users/${params.value}`}>
+        See Detail
+      </Button>
+    );
+  };
 
   return (
-    <div className="ag-theme-balham" style={{ height: 400, width: 1100, marginLeft:20 }}>
-      
-      <AgGridReact rowData={users} rowSelection="multiple">
-       
+    <div
+      className="ag-theme-alpine"
+      style={{ height: 500, width: 800, marginLeft: 170 }}
+    >
+      <h2 style={{ paddingLeft: 320, color: "black" }}>USERS LIST</h2>
+      <AgGridReact rowData={users} rowSelection="multiple" frameworkComponents={{
+        Agbuttonrender: agbuttonrender    
+      }
+    }>
         <AgGridColumn
           field="id"
           sortable={true}
           filter={true}
           checkboxSelection={true}
         ></AgGridColumn>
-        <AgGridColumn
-          field="name"
-          sortable={true}
-          filter={true}
-        ></AgGridColumn>
+        <AgGridColumn field="name" sortable={true} filter={true}></AgGridColumn>
         <AgGridColumn
           field="username"
           sortable={true}
           filter={true}
         ></AgGridColumn>
+
         <AgGridColumn
-          field="email"
+          field="id"
+          headerName=""
           sortable={true}
           filter={true}
           checkboxSelection={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="address.street"
-          sortable={true}
-          filter={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="address.suite"
-          sortable={true}
-          filter={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="address.city"
-          sortable={true}
-          filter={true}
-          checkboxSelection={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="address.zipcode"
-          sortable={true}
-          filter={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="address.geo.lat"
-          sortable={true}
-          filter={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="address.geo.lng"
-          sortable={true}
-          filter={true}
-          checkboxSelection={true}
+          cellRenderer="Agbuttonrender"
         ></AgGridColumn>
       </AgGridReact>
-     
     </div>
 
     // <div className="bbb"> <br /> USERS LIST

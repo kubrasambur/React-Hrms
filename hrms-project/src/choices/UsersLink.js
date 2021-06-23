@@ -12,14 +12,12 @@ function UsersLink() {
             src="http://simpleicon.com/wp-content/uploads/users.png"
           />
           <Card.Header>Users List</Card.Header>
-          <Card.Meta>Kübra Sambur</Card.Meta>
           <Card.Description>
           <strong>User</strong> Listesini görmek için butona tıklayınız.
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
           <Button href="http://localhost:3001/Users" color="grey">
-      
             See Users List
           </Button>
         </Card.Content>

@@ -21,7 +21,7 @@ export default function JobAdverstDetails() {
   }, [id]);
 
   const application = () => {
-    window.alert("Başvuru İşlemi Başarıyla Tamamlandı.");
+    window.alert("Applied");
   };
   const decline = () => {
     history.push("/JobAdverts");

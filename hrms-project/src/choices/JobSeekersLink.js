@@ -12,7 +12,6 @@ function JobSeekersLink() {
             src="https://icon-library.com/images/job-seeker-icon/job-seeker-icon-16.jpg"
           />
           <Card.Header>JobSeekers List</Card.Header>
-          <Card.Meta>Kübra Sambur</Card.Meta>
           <Card.Description>
           <strong>JobSeeker</strong> Listesini görmek için butona tıklayınız.
           </Card.Description>

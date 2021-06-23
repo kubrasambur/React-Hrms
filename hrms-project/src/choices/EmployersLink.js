@@ -12,7 +12,6 @@ function EmployersLink() {
             src="https://image.flaticon.com/icons/png/512/1613/1613385.png"
           />
           <Card.Header>Companys List</Card.Header>
-          <Card.Meta>Kübra Sambur</Card.Meta>
           <Card.Description>
           <strong>Companys</strong> Listesini görmek için butona tıklayınız.
           </Card.Description>

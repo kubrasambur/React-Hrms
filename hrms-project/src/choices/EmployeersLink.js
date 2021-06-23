@@ -12,7 +12,6 @@ function EmployeersLink() {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-P6hk8PqjnG71NtveatnfXRBrzDywli6vMA&usqp=CAU"
           />
           <Card.Header>Employeers List</Card.Header>
-          <Card.Meta>Kübra Sambur</Card.Meta>
           <Card.Description>
           <strong>Employeer</strong> Listesini görmek için butona tıklayınız.
           </Card.Description>

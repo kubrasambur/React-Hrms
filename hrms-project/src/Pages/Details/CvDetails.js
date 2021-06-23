@@ -28,7 +28,8 @@ export default function JobAdverstDetails() {
   };
 
   return (
-    <div>
+    <div className="bg">
+      <br />
       <h3 className="hh" >{id} Id'li cv ye ait bilgiler</h3>
 
       <Card.Group className="tttt">
@@ -39,11 +40,11 @@ export default function JobAdverstDetails() {
             <Card.Content key={cv.id}>
               <Image
             floated='centered'
-            size='medium'
+            size='tiny'
             src={cv.image}
-          />
-                <Card.Header className="bas">Name : {cv.jobseeker_name} </Card.Header>
-              <Card.Header className="bas"> Surname : {cv.jobseeker_surname}</Card.Header><hr/>
+          /> 
+              <Card.Header className="bas">Name : {cv.jobseeker_name} </Card.Header>
+              <Card.Header className="bas"> Surname : {cv.jobseeker_surname}</Card.Header><br />
               <Card.Header>ID : {id}</Card.Header><hr/>
               <Card.Header>Experience : {cv.jobseekerExperience}</Card.Header><hr/>
               <Card.Header>Birth Date : {cv.birthDate}</Card.Header><hr/>
@@ -67,8 +68,7 @@ export default function JobAdverstDetails() {
         </Card>
       </Card.Group>
             
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      
     </div>
   );
 }

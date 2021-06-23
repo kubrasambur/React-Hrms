@@ -2,22 +2,31 @@ import React, { useEffect, useState } from "react";
 import EmployersService from "../../services/EmployersService";
 import { NavLink } from 'react-router-dom';
 import { AgGridReact, AgGridColumn } from "ag-grid-react";
-
+import { Button} from "semantic-ui-react";
+ 
 function EmployersList() {
-  const [employers, setEmployers] = useState([]);
-
+  const [employer, setEmployers] = useState([]);
+  
+  const agbuttonrender=(params)=>{
+    return <Button as={NavLink} to={`/Employers/${params.value}`}>See Detail</Button>
+  }
+  
+  
   useEffect(() => {
     let employeersService = new EmployersService();
-    fetch('http://localhost:3000/Employeers')
     employeersService.getEmployers().then((result) => setEmployers(result.data));
-  },[]);
+  },[]); 
 
   return (
 
-    <div className="ag-theme-balham" style={{ height: 400, width: 1202, marginLeft:-30 }}>
-      
-      <AgGridReact rowData={employers} rowSelection="multiple">
-       
+    <div className="ag-theme-alpine" style={{ height: 400, width: 600, marginLeft:270 }}>
+      <h2 style={{ paddingLeft: 210, color: "black" }}>COMPANYS LIST</h2>
+      <AgGridReact rowData={employer} rowSelection="multiple"
+      frameworkComponents={{
+        Agbuttonrender: agbuttonrender    
+      }
+    }
+      >
         <AgGridColumn
           field="id"
           sortable={true}
@@ -29,26 +38,13 @@ function EmployersList() {
           sortable={true}
           filter={true}
         ></AgGridColumn>
+        
         <AgGridColumn
-          field="company_adress"
+          field="id"
+          headerName=""
           sortable={true}
           filter={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="company_web_adress"
-          sortable={true}
-          filter={true}
-          checkboxSelection={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="company_number"
-          sortable={true}
-          filter={true}
-        ></AgGridColumn>
-        <AgGridColumn
-          field="company_email"
-          sortable={true}
-          filter={true}
+          cellRenderer="Agbuttonrender"
         ></AgGridColumn>
         
       </AgGridReact>
@@ -71,7 +67,7 @@ function EmployersList() {
     //         <Table.Row key={employer.id}>
     //           <Table.Cell>{employer.id}</Table.Cell>
     //           <Table.Cell>{employer.company_name}</Table.Cell>
-    //           <Table.Cell><Button as={NavLink} to={`/Employers/${employer.id}`}>See Detail</Button></Table.Cell>
+    //           <Table.Cell><Button as={NavLink} to={`/Employers/${employers.id}`}>See Detail</Button></Table.Cell>
     //         </Table.Row>
     //       ))}
     //     </Table.Body>

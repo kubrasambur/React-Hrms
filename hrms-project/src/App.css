@@ -5,6 +5,7 @@
 
 .ui.main.container{
   margin-top: 6em;
+  
 }
 
 .images{
@@ -126,7 +127,7 @@ color: white;
 .bg{
   background-image: url("https://img.tamindir.com/2019/04/470608/wallpaper.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 100% ;
   background-attachment: fixed;
   margin-top: -30px;
 }

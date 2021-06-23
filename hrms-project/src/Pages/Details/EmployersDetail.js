@@ -57,8 +57,7 @@ export default function JobAdverstDetails() {
         </Card>
       </Card.Group>
       
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      
     </div>
   );
 }

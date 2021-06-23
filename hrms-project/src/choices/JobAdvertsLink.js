@@ -15,7 +15,6 @@ function JobAdvertsLink() {
             src="https://cdn2.iconfinder.com/data/icons/employment-business-2/256/Candidate_Search-512.png"
           />
           <Card.Header floated="centered">Job Adverts List</Card.Header>
-          <Card.Meta>Kübra Sambur</Card.Meta>
           <Card.Description>
          <strong>Job Adverts</strong> Listesini görmek için butona tıklayınız.
           </Card.Description>
