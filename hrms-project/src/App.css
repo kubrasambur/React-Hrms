@@ -5,14 +5,28 @@
 
 .ui.main.container{
   margin-top: 6em;
-  
 }
+.favs{
+  padding: 0% 0% 0% 0%;
+  color:burlywood;
+  font-family:'Times New Roman';
+  font-size: 15px;
+  text-align: center;
+}
+.favscart{
+  color:black;
+  font-family: sans-serif ;
+  font-weight: bold;
+  
+
+}
+
 
 .images{
   width: 150px;
   height: 140px;
-
 } 
+
 
 .text{
   text-align: center;
@@ -30,9 +44,14 @@
   margin: -2% 4% -1.5% 10%; 
   padding: -1% 2% 2% 2%;
 }
+.fav{
+  margin-left: 44%;
+}
+
 .tttt{
  padding-right: 20%;
  padding-left: 20%;
+ padding-top: 5%;
 }
 
 .header{
@@ -42,6 +61,22 @@
 }
 .hh{
   text-align: center;
+  padding-top: 5%;
+  padding-bottom: -20%;
+  margin-bottom: -5%;
+  color: white;
+  font-size: 25px;
+}
+.hh1{
+  text-align: center;
+
+  padding-bottom: -20%;
+  margin-bottom: -5%;
+  color: white;
+  font-size: 25px;
+}
+.anasayfa{
+ margin-top: -3%;
 }
 .bbb{
  padding-right: 10%;
@@ -103,10 +138,11 @@ letter-spacing: 2px;
 }
 
 .container {
-display: grid;
-grid-template-columns: 5fr 5fr;
-grid-gap: 20px;
-grid-template-areas: inherit;
+  display: grid;
+  grid-template-columns: 5fr 60fr;;
+  grid-gap: 20px;
+  grid-template-areas: inherit;
+  
 }
 .counter {
 font-weight: 400;
@@ -125,10 +161,13 @@ background: #bf1650;
 color: white;
 }
 .bg{
-  background-image: url("https://img.tamindir.com/2019/04/470608/wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100% ;
-  background-attachment: fixed;
-  margin-top: -30px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4PN-UaNWzXKvnY5PO9w9_lmDOIsc0uN8ig&usqp=CAU");
+  position: absolute;
+  min-height: 130%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
 }
 

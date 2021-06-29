@@ -17,7 +17,7 @@ function EmployeersList() {
       className="ag-theme-alpine"
       style={{ height: 400, width: 802, marginLeft: 160 }}
     >
-      <h2 style={{ paddingLeft: 320, color: "black" }}>EMPLOYEERS LIST</h2>
+      <h2 style={{ paddingLeft: 320, color: "white" }}>EMPLOYEERS LIST</h2>
       <AgGridReact rowData={employeers} rowSelection="multiple">
         <AgGridColumn
           field="id"

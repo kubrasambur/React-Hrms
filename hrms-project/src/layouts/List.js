@@ -9,7 +9,7 @@ import CvLink from "../choices/CvLink";
 
 function List() {
   return (
-    <div>
+    <div className="anasayfa">
       <Grid columns="equal">
         <Grid.Row>
           <Grid.Column>
@@ -29,10 +29,6 @@ function List() {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 }

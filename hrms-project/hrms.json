@@ -292,13 +292,33 @@
     {
       "id": "5",
       "employer": "Miya Yazılım",
-      "job_position": "Software Database Support",
+      "job_position": "Full Stack Developer",
       "city": "İzmir",
       "job_description": "Description",
       "min_salary": "4000",
       "max_salary": "7000",
       "wwork_type": "Full Time"
-    }
+    },
+    {
+      "id":"6",
+  "employer":"Biletix",
+  "job_position":"Web Developer",
+  "city":"Bursa",
+  "job_description":"Description",
+  "min_salary":"4000",
+  "max_salary":"10000",
+  "Work_type":"Full Time" 
+  },
+  {
+      "id":"7",
+  "employer":"HepsiBurada",
+  "job_position":"Frontend Developer",
+  "city":"İstanbul",
+  "job_description":"Description HepsiBurada",
+  "min_salary":"7000",
+  "max_salary":"10000",
+  "Work_type":"Part Time" 
+  }
   ],
 
   "Employers": [

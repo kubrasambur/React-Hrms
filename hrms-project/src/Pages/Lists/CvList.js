@@ -25,7 +25,7 @@ function CvList() {
       className="ag-theme-alpine"
       style={{ height: 400, width: 600, marginLeft: 270 }}
     >
-      <h2 style={{ paddingLeft: 250, color: "black" }}>CV LIST</h2>
+      <h2 style={{ paddingLeft: 250, color: "white" }}>CV LIST</h2>
       <AgGridReact
         rowData={cvs}
         rowSelection="multiple"

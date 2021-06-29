@@ -3,9 +3,13 @@ import {  Button} from "semantic-ui-react";
 import { useParams, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import JobAdvertisementService from "../../services/JobAdvertisementService";
-import { Card } from "semantic-ui-react";
+import { Card,Grid } from "semantic-ui-react";
+import { addToFavourites, removeFromFavourites } from "../../store/actions/favouritesActions";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 export default function JobAdverstDetails() {
+  const dispatch = useDispatch()
   //BU FONK. PARAMETRELERİ OBJE OLARAK VERİR.
   let { id } = useParams();
 
@@ -26,10 +30,14 @@ export default function JobAdverstDetails() {
   const decline = () => {
     history.push("/JobAdverts");
   };
-
+  const handleAddToFavourites=(advert)=>{
+    dispatch(addToFavourites(advert))
+    toast.success(`${advert.employer} ' in ${advert.id} id'li ilanı favorilere eklendi !`)
+  }
+  
   return (
     <div>
-      <h1 className="hh" >{id} Id'li ilana ait bilgiler</h1>
+      <h1 className="hh1" >{id} Id'li ilana ait bilgiler</h1>
 
       <Card.Group className="tttt" >
         <Card fluid>
@@ -45,14 +53,30 @@ export default function JobAdverstDetails() {
               <Card.Header>Min Salary : {advert.min_salary}</Card.Header><br />
 
               <Card.Content extra>
-              <div className="ui two buttons">
-              <Button onClick={application} basic color="green">
-              Application
-              </Button>
-              <Button onClick={decline} basic color="red">
-               Go Back
-              </Button>
-        </div>
+              <Grid>
+                  <Grid.Row>
+                    <Grid.Column width={5}>
+                      <Button
+                        onClick={application}
+                        basic
+                        size="huge"
+                        color="green"
+                      >
+                        Contact
+                      </Button>
+                    </Grid.Column>
+                    <Grid.Column width={6}>
+                      <Button onClick={()=>handleAddToFavourites(advert)} basic size="huge" color="blue">
+                        Add to Favourites
+                      </Button>
+                    </Grid.Column>
+                    <Grid.Column width={5}>
+                      <Button onClick={decline} basic size="huge" color="red">
+                        Go Back
+                      </Button>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
       </Card.Content>
             </Card.Content>
           ))}
@@ -60,8 +84,7 @@ export default function JobAdverstDetails() {
         </Card>
       </Card.Group>
             
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+     
     </div>
   );
 }

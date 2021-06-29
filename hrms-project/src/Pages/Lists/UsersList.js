@@ -18,13 +18,15 @@ function UsersList() {
       </Button>
     );
   };
+ 
 
   return (
     <div
       className="ag-theme-alpine"
-      style={{ height: 500, width: 800, marginLeft: 170 }}
+      style={{ height: 490, width: 800, marginLeft: 170 }}
     >
-      <h2 style={{ paddingLeft: 320, color: "black" }}>USERS LIST</h2>
+      <h2 style={{ paddingLeft: 320, color: "white",marginTop:-15 }}>USERS LIST</h2>
+
       <AgGridReact rowData={users} rowSelection="multiple" frameworkComponents={{
         Agbuttonrender: agbuttonrender    
       }
@@ -74,7 +76,6 @@ function UsersList() {
     //     </Table.Body>
     //   </Table>
 
-    //   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     // </div>
   );
 }

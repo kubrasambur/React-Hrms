@@ -15,10 +15,13 @@ import JobApplication from "../Pages/HomePage/JobApplication";
 import CvDetails from "../Pages/Details/CvDetails"
 import EmployersDetail from  "../Pages/Details/EmployersDetail"
 import UsersDetail from "../Pages/Details/UsersDetail"
+import Favourites from "./Favourites";
+import { ToastContainer } from "react-toastify";
 
 export default function Dashboard() {
   return (
     <div>
+      <ToastContainer position="bottom-right"/>
       <Grid stackable>
         <Grid.Row>
         <Grid.Column width={16}>
@@ -38,7 +41,7 @@ export default function Dashboard() {
       <Route exact path="/Cv/:id" component={CvDetails}  />
       <Route exact path="/Employers/:id" component={EmployersDetail}/>
       <Route exact path="/Users/:id" component={UsersDetail} />
-
+      <Route exact path="/Favourites" component={Favourites}  />
         </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -23,10 +23,13 @@ export default function JobAdverstDetails() {
   const decline = () => {
     history.push("/Users");
   };
+  const update = () => {
+    window.alert("Informations Updated");
+  };
 
   return (
     <div>
-      <h2 className="hh">{id} Id'li Kullanıcıya ait bilgiler</h2>
+      <h2 className="hh1">{id} Id'li Kullanıcıya ait bilgiler</h2>
 
       <Card.Group className="tttt">
         <Card fluid className="tttt">
@@ -54,9 +57,13 @@ export default function JobAdverstDetails() {
               <hr />
               <Card.Content extra>
                 <div className="ui two buttons">
+                <Button onClick={update} basic color="green">
+                    Update
+                  </Button>
                   <Button onClick={decline} basic color="red">
                     Go Back
                   </Button>
+                  
                 </div>
               </Card.Content>
             </Card.Content>

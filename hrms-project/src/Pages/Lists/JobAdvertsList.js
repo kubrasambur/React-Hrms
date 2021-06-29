@@ -27,7 +27,7 @@ export default function JobAdvertsList() {
       className="ag-theme-alpine"
       style={{ height: 400, width: 800, marginLeft: 180 }}
     >
-      <h2 style={{ paddingLeft: 320, color: "black" }}>JOB ADVDERTS LIST</h2>
+      <h2 style={{ paddingLeft: 320, color: "white" }}>JOB ADVDERTS LIST</h2>
       <AgGridReact
         rowData={JobAdverts}
         rowSelection="multiple"

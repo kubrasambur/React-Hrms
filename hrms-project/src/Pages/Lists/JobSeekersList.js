@@ -18,7 +18,7 @@ function JobSeekersList() {
       className="ag-theme-alpine"
       style={{ height: 300, width: 602, marginLeft: 270 }}
     >
-      <h2 style={{ paddingLeft: 210, color: "black" }}>JOB SEEKERS LIST</h2>
+      <h2 style={{ paddingLeft: 210, color: "white" }}>JOB SEEKERS LIST</h2>
       <AgGridReact rowData={jobSeekers} rowSelection="multiple">
         <AgGridColumn
           field="id"

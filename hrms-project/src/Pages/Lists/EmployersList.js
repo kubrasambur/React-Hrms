@@ -19,8 +19,8 @@ function EmployersList() {
 
   return (
 
-    <div className="ag-theme-alpine" style={{ height: 400, width: 600, marginLeft:270 }}>
-      <h2 style={{ paddingLeft: 210, color: "black" }}>COMPANYS LIST</h2>
+    <div className="ag-theme-alpine" style={{ height: 400, width: 602, marginLeft:270 }}>
+      <h2 style={{ paddingLeft: 210, color: "white" }}>COMPANYS LIST</h2>
       <AgGridReact rowData={employer} rowSelection="multiple"
       frameworkComponents={{
         Agbuttonrender: agbuttonrender    
