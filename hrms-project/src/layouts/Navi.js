@@ -27,7 +27,7 @@ function Navi() {
           <Menu.Item as={NavLink} to="/JobEmployer" name="İş İlani Ver"/>
           <Menu.Item as={NavLink} to="/JobApplication" name="İş Başvuru Formu"/>
           <Menu.Item as={NavLink} to="/Favourites" name={"Favourities" + (favItems.length >0 ? favItems.length : "")} className="fav"/> 
-
+          
           <Menu.Menu className="btns" position="right" >
           
            {isAuthenticated ? <SignIn signout={handlerSignOut}  />: <SignOut SignIn={handlerSignIn} /> }

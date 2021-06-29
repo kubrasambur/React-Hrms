@@ -24,14 +24,10 @@ export default function favReducer(state=initialState,{type,payload}) {
           
         case REMOVE_FROM_FAVOURİTES:
           let advert1 = state.favItems.find((a) => a.advert.id === payload.id);
-          console.log("silindi")
           if(advert1){
-            console.log("if")
-            
             return {...state}
           }else {
             state.favItems.splice(advert1,1)
-            console.log("else")
             return {
               ...state,
             };

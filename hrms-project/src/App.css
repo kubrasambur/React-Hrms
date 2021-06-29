@@ -49,8 +49,8 @@
 }
 
 .tttt{
- padding-right: 20%;
- padding-left: 20%;
+ padding-right: 15%;
+ padding-left: 5%;
  padding-top: 5%;
 }
 
@@ -61,7 +61,7 @@
 }
 .hh{
   text-align: center;
-  padding-top: 5%;
+  padding-top: 0%;
   padding-bottom: -20%;
   margin-bottom: -5%;
   color: white;
@@ -69,7 +69,6 @@
 }
 .hh1{
   text-align: center;
-
   padding-bottom: -20%;
   margin-bottom: -5%;
   color: white;
@@ -144,6 +143,7 @@ letter-spacing: 2px;
   grid-template-areas: inherit;
   
 }
+
 .counter {
 font-weight: 400;
 background: white;
@@ -160,10 +160,14 @@ button[type="button"]:hover {
 background: #bf1650;
 color: white;
 }
+.auth{
+  font-size: 25px;
+  color: aliceblue;
+}
 .bg{
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4PN-UaNWzXKvnY5PO9w9_lmDOIsc0uN8ig&usqp=CAU");
   position: absolute;
-  min-height: 130%;
+  min-height: 105%;
   min-width: 1024px;
   width: 100%;
   height: auto;
