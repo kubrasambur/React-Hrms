@@ -18,26 +18,34 @@ function UsersList() {
       </Button>
     );
   };
- 
 
   return (
     <div
       className="ag-theme-alpine"
       style={{ height: 490, width: 800, marginLeft: 170 }}
     >
-      <h2 style={{ paddingLeft: 320, color: "white",marginTop:-15 }}>USERS LIST</h2>
+      <h2 style={{ paddingLeft: 320, color: "white", marginTop: -15 }}>
+        USERS LIST
+      </h2>
 
-      <AgGridReact rowData={users} rowSelection="multiple" frameworkComponents={{
-        Agbuttonrender: agbuttonrender    
-      }
-    }>
+      <AgGridReact
+        rowData={users}
+        rowSelection="multiple"
+        frameworkComponents={{
+          Agbuttonrender: agbuttonrender,
+        }}
+      >
         <AgGridColumn
           field="id"
           sortable={true}
           filter={true}
           checkboxSelection={true}
         ></AgGridColumn>
-        <AgGridColumn field="name" sortable={true} filter={true}></AgGridColumn>
+        <AgGridColumn 
+          field="name" 
+          sortable={true} 
+          filter={true}>
+        </AgGridColumn>
         <AgGridColumn
           field="username"
           sortable={true}
@@ -49,7 +57,6 @@ function UsersList() {
           headerName=""
           sortable={true}
           filter={true}
-          checkboxSelection={true}
           cellRenderer="Agbuttonrender"
         ></AgGridColumn>
       </AgGridReact>

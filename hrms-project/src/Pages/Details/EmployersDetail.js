@@ -15,7 +15,7 @@ export default function JobAdverstDetails() {
 
   useEffect(() => {
     let EmployersService = new EmployerService();
-    EmployersService.getById(id).then((result) => {
+    EmployersService.getById(parseInt(id)).then((result) => {
       setEmployers(result.data);
     });
   }, [id]);
@@ -70,25 +70,25 @@ export default function JobAdverstDetails() {
                 {employers.map((employer) => (
                   <Card.Content key={employer.id} className="tttt">
                     <Card.Header className="bas">
-                      Name : {employer.company_name}{" "}
+                      Company Name : {employer.companyName}{" "}
                     </Card.Header>
                     <hr />
                     <Card.Header>ID : {id}</Card.Header>
                     <hr />
                     <Card.Header>
-                      Company City : {employer.company_adress}
+                      Company City : {employer.companyAdress}
                     </Card.Header>
                     <hr />
                     <Card.Header>
-                      Company Web Adress : {employer.company_web_adress}
+                      Company Web Adress : {employer.companyWebAdress}
                     </Card.Header>
                     <hr />
                     <Card.Header>
-                      Company Number : {employer.company_number}
+                      Company Number : {employer.companyNumber}
                     </Card.Header>
                     <hr />
                     <Card.Header>
-                      Company mail : {employer.company_email}
+                      Company mail : {employer.companyEmail}
                     </Card.Header>
                     <hr />
                     <Card.Content extra>

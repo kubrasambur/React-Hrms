@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Button, Card, Image } from "semantic-ui-react";
 
 function UsersLink() {
@@ -13,11 +14,11 @@ function UsersLink() {
           />
           <Card.Header>Users List</Card.Header>
           <Card.Description>
-          <strong>User</strong> Listesini görmek için butona tıklayınız.
+          <strong>Users</strong> Listesini görmek için butona tıklayınız.
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Button href="http://localhost:3001/Users" color="grey">
+          <Button as={NavLink} to="/Users" color="grey">
             See Users List
           </Button>
         </Card.Content>

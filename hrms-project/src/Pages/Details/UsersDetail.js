@@ -15,7 +15,7 @@ export default function JobAdverstDetails() {
 
   useEffect(() => {
     let UserService = new UsersService();
-    UserService.getById(id).then((result) => {
+    UserService.getById(parseInt(id)).then((result) => {
       setUser(result.data);
     });
   }, [id]);
@@ -67,7 +67,7 @@ export default function JobAdverstDetails() {
                 {user.map((user) => (
                   <Card.Content key={user.id} className="tttt">
                     <Card.Header className="bas">
-                      Name : {user.username}{" "}
+                      User Name : {user.username}{" "}
                     </Card.Header>
                     <hr />
                     <Card.Header>ID : {id}</Card.Header>
@@ -83,7 +83,7 @@ export default function JobAdverstDetails() {
                     <Card.Header>Website : {user.website}</Card.Header>
                     <hr />
                     <Card.Header>
-                      Company name : {user.company.name}
+                      Company name : {user.companyname}
                     </Card.Header>
                     <hr />
                     <Card.Content extra>

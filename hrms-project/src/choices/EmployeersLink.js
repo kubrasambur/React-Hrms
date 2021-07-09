@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Button, Card, Image } from "semantic-ui-react";
 
 function EmployeersLink() {
@@ -17,7 +18,7 @@ function EmployeersLink() {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Button href="http://localhost:3001/Employeers" color="grey">
+          <Button as={NavLink} to="/Employeers" color="grey">
              See Employeers List
           </Button>
         </Card.Content>

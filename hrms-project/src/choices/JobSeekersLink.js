@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Button, Card, Image} from "semantic-ui-react";
 
 function JobSeekersLink() {
@@ -17,7 +18,7 @@ function JobSeekersLink() {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Button href="http://localhost:3001/JobSeekers" color="grey">
+          <Button as={NavLink} to="/JobSeekers" color="grey">
             See JobSeekers List
           </Button>
         </Card.Content>

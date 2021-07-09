@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Button, Card, Image} from "semantic-ui-react";
 
 function CvLink() {
@@ -18,7 +19,7 @@ function CvLink() {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <Button href="http://localhost:3001/Cv" color="grey">
+            <Button as={NavLink} to="/Cv" color="grey">
               
               See Cv List
             </Button>

@@ -34,13 +34,15 @@ function CvList() {
         }}
       >
         <AgGridColumn
-          field="jobseeker_name"
+          field="jobseekerName"
+          headerName="Jobseeker Name"
           sortable={true}
           filter={true}
           checkboxSelection={true}
         ></AgGridColumn>
         <AgGridColumn
-          field="jobseeker_surname"
+          field="jobseekerSurname"
+          headerName="jobseeker Surname"
           sortable={true}
           filter={true}
         ></AgGridColumn>

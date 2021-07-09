@@ -19,7 +19,7 @@ export default function JobAdverstDetails() {
 
   useEffect(() => {
     let jobAdvertService = new JobAdvertisementService();
-    jobAdvertService.getById(id).then((result) => {
+    jobAdvertService.getById(parseInt(id)).then((result) => {
       setJobAdvert(result.data);
     });
   }, [id]);
@@ -84,17 +84,17 @@ export default function JobAdverstDetails() {
                     <hr />
                     <Card.Header>City : {advert.city}</Card.Header>
                     <hr />
-                    <Card.Header>Position : {advert.job_position}</Card.Header>
+                    <Card.Header>Position : {advert.jobPosition}</Card.Header>
                     <hr />
-                    <Card.Header>Work Type : {advert.work_type}</Card.Header>
+                    <Card.Header>Work Type : {advert.workType}</Card.Header>
                     <hr />
                     <Card.Header>
-                      Description : {advert.job_description}
+                      Description : {advert.jobDescription}
                     </Card.Header>
                     <hr />
-                    <Card.Header>Max Salary : {advert.max_salary}</Card.Header>
+                    <Card.Header>Max Salary : {advert.maxSalary}</Card.Header>
                     <hr />
-                    <Card.Header>Min Salary : {advert.min_salary}</Card.Header>
+                    <Card.Header>Min Salary : {advert.minSalary}</Card.Header>
                     <br />
 
                     <Card.Content extra>

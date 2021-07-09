@@ -48,7 +48,7 @@ export default function JobAdvertsList() {
         ></AgGridColumn>
 
         <AgGridColumn
-          field="job_position"
+          field="jobPosition"
           sortable={true}
           filter={true}
         ></AgGridColumn>

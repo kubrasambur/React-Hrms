@@ -8,7 +8,7 @@ import { ExampleComponent, ExampleButton } from "kubra-ui-kit";
 
 export default function JobAdverstDetails() {
   //BU FONK. PARAMETRELERİ OBJE OLARAK VERİR.
-  let { id } = useParams();
+  let { Id } = useParams();
 
   const [Cv, setCv] = useState([]);
 
@@ -16,10 +16,10 @@ export default function JobAdverstDetails() {
 
   useEffect(() => {
     let jobAdvertService = new CvService();
-    jobAdvertService.getById(id).then((result) => {
+    jobAdvertService.GetById(parseInt(Id)).then((result) => {
       setCv(result.data);
     });
-  }, [id]);
+  }, [Id]);
 
   const application = () => {
     window.alert("Contacted");
@@ -62,42 +62,23 @@ export default function JobAdverstDetails() {
             </List>
           </Grid.Column>
           <Grid.Column width={12} className="ui animated middle aligned list">
-            <h3 className="hh">{id} Id'li cv ye ait bilgiler</h3>
+            <h3 className="hh">{Id} Id'li cv ye ait bilgiler</h3>
 
             <Card.Group className="tttt">
-              {/* <ExampleComponent text="fgd"></ExampleComponent> 
-  <ExampleButton onClick={() => {
-    window.alert("tıklandı")
-  }}
-  text="flklgk"
-  style={{color:"white"}}
-  type='button'
-  buttonStyle='primary'
-  buttonSize='btn--large'>fdf</ExampleButton> */}
-              {/* <Menu1 menu1="users" menu2="employers" menu3="workers"></Menu1> */}
-              {/* <Button
-  onClick={() => {
-    console.log('cliked')
-  }}
-  type='button'
-  buttonStyle='btn--primary--outline'
-  buttonSize='btn--large'
->
-  Buy now
-</Button> */}
+              
               <Card fluid>
                 {Cv.map((cv) => (
                   <Card.Content key={cv.id}>
                     <Image floated="centered" size="tiny" src={cv.image} />
                     <Card.Header className="bas">
-                      Name : {cv.jobseeker_name}{" "}
+                      Name : {cv.jobseekerName}{" "}
                     </Card.Header>
                     <Card.Header className="bas">
                       {" "}
-                      Surname : {cv.jobseeker_surname}
+                      Surname : {cv.jobseekerSurname}
                     </Card.Header>
                     <br />
-                    <Card.Header>ID : {id}</Card.Header>
+                    <Card.Header>ID : {Id}</Card.Header>
                     <hr />
                     <Card.Header>
                       Experience : {cv.jobseekerExperience}
@@ -160,5 +141,27 @@ export default function JobAdverstDetails() {
         </Grid.Row>
       </Grid>
     </div>
+    /* <ExampleComponent text="fgd"></ExampleComponent> 
+  <ExampleButton onClick={() => {
+    window.alert("tıklandı")
+  }}
+  text="flklgk"
+  style={{color:"white"}}
+  type='button'
+  buttonStyle='primary'
+  buttonSize='btn--large'>fdf</ExampleButton> */
+              /* <Menu1 menu1="users" menu2="employers" menu3="workers"></Menu1> */
+              /* <Button
+  onClick={() => {
+    console.log('cliked')
+  }}
+  type='button'
+  buttonStyle='btn--primary--outline'
+  buttonSize='btn--large'
+>
+  Buy now
+</Button> */
   );
+  
 }
+

@@ -27,13 +27,13 @@ function JobSeekersList() {
           checkboxSelection={true}
         ></AgGridColumn>
         <AgGridColumn
-          field="first_name"
+          field="firstName"
           sortable={true}
           filter={true}
         ></AgGridColumn>
 
         <AgGridColumn
-          field="last_name"
+          field="lastName"
           sortable={true}
           filter={true}
         ></AgGridColumn>

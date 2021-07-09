@@ -37,7 +37,7 @@ function EmployeersList() {
           filter={true}
         ></AgGridColumn>
         <AgGridColumn
-          field="position_id"
+          field="positionId"
           sortable={true}
           filter={true}
         ></AgGridColumn>

@@ -2,10 +2,10 @@ import axios from "axios"
 
 export default class CvService{
     getCv(){
-        return axios.get("http://localhost:3000/Cv")
+        return axios.get("https://localhost:44370/api/Cv")
     }
-    getById(id){
-        return axios.get("http://localhost:3000/Cv?id="+id)
+    GetById(id){
+        return axios.get("https://localhost:44370/api/Cv/"+id)
     }
 
 }

@@ -34,7 +34,7 @@ function EmployersList() {
           checkboxSelection={true}
         ></AgGridColumn>
         <AgGridColumn
-          field="company_name"
+          field="companyName"
           sortable={true}
           filter={true}
         ></AgGridColumn>
