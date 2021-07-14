@@ -8,6 +8,9 @@ export default class JobAdvertisementService{
     getById(id){
         return axios.get("https://localhost:44370/api/JobAdvertisement/"+id)
     }
+}
 
 
+export const postAdvert=(jobAdvertisement) =>{
+    return axios.post("https://localhost:44370/api/JobAdvertisement/",jobAdvertisement)
 }

@@ -15,7 +15,7 @@ export default function JobAdverstDetails() {
 
   useEffect(() => {
     let UserService = new UsersService();
-    UserService.getById(parseInt(id)).then((result) => {
+    UserService.getById(id).then((result) => {
       setUser(result.data);
     });
   }, [id]);

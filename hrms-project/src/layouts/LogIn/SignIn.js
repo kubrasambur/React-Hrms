@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function SignIn({signout}) {
     return (
-        <div>
+        <div >
             <Menu.Item >
                 <Image avatar spaced="right" src="https://yt3.ggpht.com/ytc/AAUvwnj8uUo5Rv7ujATFCzkALMx1v_mANNBm9lPs4Iyhk1c=s900-c-k-c0x00ffffff-no-rj"/>
                 <Dropdown pointing="top left" text="Kübra">

@@ -16,7 +16,7 @@ function JobAdvertsLink() {
           />
           <Card.Header floated="centered">Job Adverts List</Card.Header>
           <Card.Description>
-         <strong>Job Adverts</strong> Listesini görmek için butona tıklayınız.
+          Click the button to see <strong>Job Adverts</strong> List
           </Card.Description>
         </Card.Content>
         <Card.Content extra>

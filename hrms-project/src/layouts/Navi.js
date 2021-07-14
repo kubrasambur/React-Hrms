@@ -23,9 +23,9 @@ function Navi() {
     <div>
       <Menu color="red" inverted fixed="top">
         <Container >
-          <Menu.Item as={NavLink} to="/" name="Anasayfa" />
-          <Menu.Item as={NavLink} to="/JobEmployer" name="İş İlani Ver"/>
-          <Menu.Item as={NavLink} to="/JobApplication" name="İş Başvuru Formu"/>
+          <Menu.Item as={NavLink} to="/" name="Home Page" />
+          <Menu.Item as={NavLink} to="/JobEmployer" name="Give Job Advert"/>
+          <Menu.Item as={NavLink} to="/JobApplication" name="Job Application Form"/>
           <Menu.Item as={NavLink} to="/Favourites" name={"Favourities" + (favItems.length >0 ? favItems.length : "")} className="fav"/> 
           
           <Menu.Menu className="btns" position="right" >

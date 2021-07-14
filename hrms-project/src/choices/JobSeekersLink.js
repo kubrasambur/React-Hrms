@@ -14,7 +14,7 @@ function JobSeekersLink() {
           />
           <Card.Header>JobSeekers List</Card.Header>
           <Card.Description>
-          <strong>JobSeeker</strong> Listesini görmek için butona tıklayınız.
+          Click the button to see <strong>JobSeekers</strong> List
           </Card.Description>
         </Card.Content>
         <Card.Content extra>

@@ -14,7 +14,7 @@ function EmployersLink() {
           />
           <Card.Header>Companys List</Card.Header>
           <Card.Description>
-          <strong>Companys</strong> Listesini görmek için butona tıklayınız.
+          Click the button to see <strong>Companys</strong> List
           </Card.Description>
         </Card.Content>
         <Card.Content extra>

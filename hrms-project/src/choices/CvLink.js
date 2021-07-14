@@ -13,9 +13,8 @@ function CvLink() {
             src="https://cdn0.iconfinder.com/data/icons/thin-files-documents/57/thin-081_file_document_cv_curriculum_vitae-512.png"
           />
           <Card.Header>Cv List</Card.Header>
-          <Card.Description> <br />
-          <strong>Cv</strong> Listesini görmek için butona tıklayınız.
-          <br /> 
+          <Card.Description>
+          Click the button to see <strong>Cv</strong> List
           </Card.Description>
         </Card.Content>
         <Card.Content extra>

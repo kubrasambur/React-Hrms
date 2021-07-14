@@ -8,5 +8,11 @@ export default class EmployersSevice{
     getById(id){
         return axios.get("https://localhost:44370/api/Employer/"+id)
     }
+    post(companyName,companyNumber){
+        return axios.post("https://localhost:44370/api/Employer/",{
+            companyName:{companyName}, 
+            companyNumber:{companyNumber}
+        })
+    }
 
 }

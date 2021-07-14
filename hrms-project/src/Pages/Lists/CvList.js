@@ -3,6 +3,7 @@ import { Button } from "semantic-ui-react";
 import CvService from "../../services/CvService";
 import { NavLink } from "react-router-dom";
 import { AgGridReact, AgGridColumn } from "ag-grid-react";
+import {deleteCv} from "../../services/CvService"
 
 function CvList() {
   const [cvs, setCv] = useState([]);
@@ -19,18 +20,26 @@ function CvList() {
       </Button>
     );
   };
+  const agbuttonrenderDelete = (params) => {
+    return (
+      <Button onClick={deleteCv(params.value)}>
+        Delete {params.value}
+      </Button>
+    );
+  };
 
   return (
     <div
       className="ag-theme-alpine"
-      style={{ height: 400, width: 600, marginLeft: 270 }}
+      style={{ height: 400, width: 800, marginLeft: 190 }}
     >
-      <h2 style={{ paddingLeft: 250, color: "white" }}>CV LIST</h2>
+      <h2 style={{ paddingLeft: 330, color: "white" }}>CV LIST</h2>
       <AgGridReact
         rowData={cvs}
         rowSelection="multiple"
         frameworkComponents={{
           Agbuttonrender: agbuttonrender,
+          Agbuttonrender2: agbuttonrenderDelete,
         }}
       >
         <AgGridColumn
@@ -53,6 +62,13 @@ function CvList() {
           sortable={true}
           filter={true}
           cellRenderer="Agbuttonrender"
+        ></AgGridColumn>
+        <AgGridColumn
+          field="id"
+          headerName=""
+          sortable={true}
+          filter={true}
+          cellRenderer="Agbuttonrender2"
         ></AgGridColumn>
       </AgGridReact>
     </div>
@@ -78,7 +94,6 @@ function CvList() {
     //     </Table.Body>
 
     //   </Table>
-    //   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     // </div>
   );
 }

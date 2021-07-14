@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid,Segment  } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
+import {postCv} from "../../services/CvService"
 
 function JobApplication() {
   const {
@@ -8,7 +9,10 @@ function JobApplication() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => alert(JSON.stringify(data));
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+    postCv(data);
+  };
   return (
     <div>
       <br />
@@ -18,7 +22,7 @@ function JobApplication() {
           <Grid.Row>
             <Grid.Column width={8}>
               <input
-                {...register("Name", {
+                {...register("JobseekerName", {
                   required: true,
                   pattern: /^[A-Za-z]+$/i,
                 })}
@@ -31,7 +35,7 @@ function JobApplication() {
             </Grid.Column>
             <Grid.Column width={8}>
               <input
-                {...register("Surname", { required: true })}
+                {...register("JobseekerSurname", { required: true })}
                 placeholder="Surname"
               />
               {errors?.Surname?.type === "required" && (
@@ -91,33 +95,50 @@ function JobApplication() {
               )}
             </Grid.Column>
           </Grid.Row>
-
           <Grid.Row>
-            <Grid.Column width={16}>
-              <select {...register("Operation Time", { required: true })}>
-                <option value="">Select Operation Time</option>
-                <option value="Fulltime">Full Time</option>
-                <option value="Parttime">Part Time</option>
-              </select>
-
-              {errors?.Worktype?.type === "required" && (
+            
+            <Grid.Column width={8}>
+              <input
+                {...register("School", { required: true })}
+                placeholder="School"
+              />
+              {errors?.School?.type === "required" && (
                 <p>Bu Alan Zorunludur.</p>
               )}
-              
-            </Grid.Column>
             
+            </Grid.Column>
+            <Grid.Column width={8}>
+            <input
+                {...register("Github", { required: true })}
+                placeholder="Github"
+              />
+              {errors?.Github?.type === "required" && (
+                <p>Bu Alan Zorunludur.</p>
+              )}
+            </Grid.Column>
           </Grid.Row>
+
           <Grid.Row>
-            <Grid.Column width={16}>
+            <Grid.Column width={8}>
               <input color="grey"
-                {...register("WorkExperiences", { required: true })}
+                {...register("JobseekerExperience", { required: true })}
                 placeholder="Work Experiences"
               />
               {errors?.WorkExperiences?.type === "required" && (
                 <p>Bu Alan Zorunludur.</p>
               )}
-              <input type="submit" />
+              
             </Grid.Column>
+            <Grid.Column width={8}>
+            <input
+                {...register("Image", { required: true })}
+                placeholder="Image Url"
+              />
+              {errors?.Image?.type === "required" && (
+                <p>Bu Alan Zorunludur.</p>
+              )}
+            </Grid.Column>
+            <input type="submit" />
           </Grid.Row>
         </Grid>
       </form>
@@ -141,8 +162,6 @@ function JobApplication() {
           ))}
         </Table.Body>
       </Table> */}
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
     </div>
   );
 }
